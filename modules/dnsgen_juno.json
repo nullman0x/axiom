@@ -1,0 +1,4 @@
+[{
+        "command":"dnsgen input --fast | tee output",
+        "ext":"txt"
+}]
