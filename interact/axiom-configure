@@ -8,10 +8,10 @@ NULLMAN!!!
 
 EOF
 
-echo -e "${Blue}Hello! Welcome to Axiom configuration :)"
+echo -e "${Red}Hello! Welcome to Axiom configuration :)"
 echo -e "Press enter to install dependencies and begin installation!${Color_Off}"
 read
-echo -e "${Blue}INSTALLING AXIOM...${Color_Off}"
+echo -e "${Red}INSTALLING AXIOM...${Color_Off}"
 sleep 1
 
 echo -e "${BWhite}Installing deps! Please wait :) ${Color_Off}"
@@ -50,25 +50,25 @@ if [ $BASEOS == "Linux" ]; then
     fi
 
     if [ $OS == "Arch" ] || [ $OS == "ManjaroLinux" ]; then
-        echo -e "${Blue}Congrats, you run arch..."
+        echo -e "${Red}Congrats, you run arch..."
         sudo pacman -S fzf packer jq doctl
     elif [ $OS == "Ubuntu" ] || [ $OS == "Debian" ] || [ $OS == "Linuxmint" ] || [ $OS == "Parrot" ] || [ $OS == "Kali" ]; then
-        echo -e "${Blue}Installing other repo deps...${Color_Off}"
+        echo -e "${Red}Installing other repo deps...${Color_Off}"
         sudo apt-get update && sudo apt-get install fzf git ruby python3-pip curl net-tools git unzip xsltproc bc uuid-runtime
-        echo -e "${Blue}Installing jq...${Color_Off}"
+        echo -e "${Red}Installing jq...${Color_Off}"
         sudo wget -O /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && sudo chmod +x /usr/bin/jq
-        echo -e "${Blue}Installing packer...${Color_Off}"
+        echo -e "${Red}Installing packer...${Color_Off}"
         wget -O /tmp/packer.zip https://releases.hashicorp.com/packer/1.5.6/packer_1.5.6_linux_amd64.zip && cd /tmp/ && unzip packer.zip && sudo mv packer /usr/bin/
-        echo -e "${Blue}Installing Interlace...${Color_Off}"
+        echo -e "${Red}Installing Interlace...${Color_Off}"
         git clone https://github.com/codingo/Interlace.git /tmp/interlace
         cd /tmp/interlace && sudo python3 setup.py install
-        echo -e "${Blue}Installing doctl...${Color_Off}"
+        echo -e "${Red}Installing doctl...${Color_Off}"
         wget -O /tmp/doctl.tar.gz https://github.com/digitalocean/doctl/releases/download/v1.45.0/doctl-1.45.0-linux-amd64.tar.gz && tar -xvzf /tmp/doctl.tar.gz && sudo mv doctl /usr/bin/doctl
-        echo -e "${Blue}Installing ibmcloud cli...${Color_Off}"
+        echo -e "${Red}Installing ibmcloud cli...${Color_Off}"
         curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-        echo -e "${Blue}Installing gowitness...${Color_Off}"
+        echo -e "${Red}Installing gowitness...${Color_Off}"
         sudo wget -O /usr/bin/gowitness https://github.com/sensepost/gowitness/releases/download/2.2.0/gowitness-2.2.0-linux-amd64 && sudo chmod +x /usr/bin/gowitness
-        echo -e "${Blue}Increasing ulimit, a reboot is required to take effect ...${Color_Off}"
+        echo -e "${Red}Increasing ulimit, a reboot is required to take effect ...${Color_Off}"
         sudo bash -c 'echo "DefaultLimitNOFILE=655350" >> /etc/systemd/user.conf'
         sudo bash -c 'echo "DefaultLimitNOFILE=655350" >> /etc/systemd/system.conf'
         echo "$USER hard nofile 655350" | sudo tee -a /etc/security/limits.conf > /dev/null
@@ -78,33 +78,33 @@ if [ $BASEOS == "Linux" ]; then
         mkdir -p "${HOME}/.ssh/sockets"
 
 	elif [ $OS == "Fedora" ]; then
-      	echo -e "${Blue}Installing other repo deps...${Color_Off}"
+      	echo -e "${Red}Installing other repo deps...${Color_Off}"
 		    sudo dnf update && sudo dnf install bc fzf git rubypick python3-pip curl net-tools unzip util-linux
-		    echo -e "${Blue}Installing jq...${Color_Off}"
+		    echo -e "${Red}Installing jq...${Color_Off}"
 		    sudo wget -O /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && sudo chmod +x /usr/bin/jq
-		    echo -e "${Blue}Installing packer...${Color_Off}"
+		    echo -e "${Red}Installing packer...${Color_Off}"
 		    wget -O /tmp/packer.zip https://releases.hashicorp.com/packer/1.5.6/packer_1.5.6_linux_amd64.zip && cd /tmp/ && unzip packer.zip && sudo mv packer /usr/bin/
-		    echo -e "${Blue}Installing other repo deps...${Color_Off}"
+		    echo -e "${Red}Installing other repo deps...${Color_Off}"
 		    sudo dnf -y update && sudo dnf -y install fzf git
-		    echo -e "${Blue}Installing doctl...${Color_Off}"
+		    echo -e "${Red}Installing doctl...${Color_Off}"
 		    wget -O /tmp/doctl.tar.gz https://github.com/digitalocean/doctl/releases/download/v1.45.0/doctl-1.45.0-linux-amd64.tar.gz && tar -xvzf /tmp/doctl.tar.gz && sudo mv doctl /usr/bin/doctl
 	elif [ $OS == "UbuntuWSL" ]; then
-        echo -e "${Blue}Installing other repo deps...${Color_Off}"
+        echo -e "${Red}Installing other repo deps...${Color_Off}"
         sudo apt-get update && sudo apt-get install fzf git ruby python3-pip curl net-tools git unzip xsltproc bc uuid-runtime
-        echo -e "${Blue}Installing jq...${Color_Off}"
+        echo -e "${Red}Installing jq...${Color_Off}"
         sudo wget -O /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && sudo chmod +x /usr/bin/jq
-        echo -e "${Blue}Installing packer...${Color_Off}"
+        echo -e "${Red}Installing packer...${Color_Off}"
         wget -O /tmp/packer.zip https://releases.hashicorp.com/packer/1.5.6/packer_1.5.6_linux_amd64.zip && cd /tmp/ && unzip packer.zip && sudo mv packer /usr/bin/
-        echo -e "${Blue}Installing Interlace...${Color_Off}"
+        echo -e "${Red}Installing Interlace...${Color_Off}"
         git clone https://github.com/codingo/Interlace.git /tmp/interlace
         cd /tmp/interlace && sudo python3 setup.py install
-        echo -e "${Blue}Installing doctl...${Color_Off}"
+        echo -e "${Red}Installing doctl...${Color_Off}"
         wget -O /tmp/doctl.tar.gz https://github.com/digitalocean/doctl/releases/download/v1.45.0/doctl-1.45.0-linux-amd64.tar.gz && tar -xvzf /tmp/doctl.tar.gz && sudo mv doctl /usr/bin/doctl
-        echo -e "${Blue}Installing ibmcloud cli...${Color_Off}"
+        echo -e "${Red}Installing ibmcloud cli...${Color_Off}"
         curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-        echo -e "${Blue}Installing gowitness...${Color_Off}"
+        echo -e "${Red}Installing gowitness...${Color_Off}"
         sudo wget -O /usr/bin/gowitness https://github.com/sensepost/gowitness/releases/download/2.2.0/gowitness-2.2.0-linux-amd64 && sudo chmod +x /usr/bin/gowitness
-        echo -e "${Blue}Increasing ulimit, a reboot is required to take effect ...${Color_Off}"
+        echo -e "${Red}Increasing ulimit, a reboot is required to take effect ...${Color_Off}"
         sudo bash -c 'echo "DefaultLimitNOFILE=655350" >> /etc/systemd/user.conf'
         sudo bash -c 'echo "DefaultLimitNOFILE=655350" >> /etc/systemd/system.conf'
         echo "$USER hard nofile 655350" | sudo tee -a /etc/security/limits.conf > /dev/null
@@ -119,14 +119,14 @@ fi
 
 #install go
 if ! [ -x "$(command -v go)" ]; then
-       echo -e "${Blue}It looks like go is not installed, would you like to install it now${Color_Off}"
+       echo -e "${Red}It looks like go is not installed, would you like to install it now${Color_Off}"
        PS3="Please select an option : "
        choices=("yes" "no")
        select choice in "${choices[@]}"; do
        case $choice in
        yes)
 
-       echo -e "${Blue}Installing Golang${Color_Off}"
+       echo -e "${Red}Installing Golang${Color_Off}"
        wget https://golang.org/dl/go1.14.4.linux-amd64.tar.gz
        sudo tar -C /usr/local -xzf go1.14.4.linux-amd64.tar.gz 
        mkdir -p "${HOME}/go"
@@ -152,27 +152,24 @@ fi
 if [ $BASEOS == "Mac" ]; then
          whereis brew
   if [ ! $? -eq 0 ] || [[ ! -z ${AXIOM_FORCEBREW+x} ]]; then
-         echo -e "${Blue}Installing brew...${Color_Off}"
+         echo -e "${Red}Installing brew...${Color_Off}"
          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   else
-         echo -e "${Blue}Checking for brew... already installed, skipping installation.${Color_Off}"
-         echo -e "${Blue}    Note: You can force brew installation by running${Color_Off}"
+         echo -e "${Red}Checking for brew... already installed, skipping installation.${Color_Off}"
+         echo -e "${Red}    Note: You can force brew installation by running${Color_Off}"
          echo -e '    $ AXIOM_FORCEBREW=yes $HOME/.axiom/interact/axiom-configure'
   fi
-         echo -e "${Blue}Installing doctl...${Color_Off}"
-         brew install doctl
-         echo -e "${Blue}Installing go...${Color_Off}"
+         
+         echo -e "${Red}Installing go...${Color_Off}"
          brew install golang
-         echo -e "${Blue}Installing ibmcloud cli...${Color_Off}"
-         curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
-         echo -e "${Blue}Installing jq...${Color_Off}"
+         echo -e "${Red}Installing jq...${Color_Off}"
          brew install jq
-         echo -e "${Blue}Installing coreutils...${Color_Off}"
+         echo -e "${Red}Installing coreutils...${Color_Off}"
          brew install coreutils
-         echo -e "${Blue}Installing packer...${Color_Off}"
+         echo -e "${Red}Installing packer...${Color_Off}"
          mkdir -p $(go env GOPATH)/src/github.com/hashicorp && cd $_
          sudo rm -r packer/ ; git clone https://github.com/hashicorp/packer.git
-         echo -e "${Blue}Installing Python3...${Color_Off}"
+         echo -e "${Red}Installing Python3...${Color_Off}"
          brew install python3
          cd packer
          make dev
@@ -182,20 +179,16 @@ if [ $BASEOS == "Mac" ]; then
 fi
 
 if [ ! -d $AXIOM_PATH ]; then
-    echo -e "${Blue}Installing axiom scripts...${Color_Off}"
-    git clone https://github.com/pry0cc/axiom $AXIOM_PATH
+    echo -e "${Red}Installing axiom scripts...${Color_Off}"
+    git clone https://github.com/nullman0x/axiom $AXIOM_PATH
 else
     cd $AXIOM_PATH && git pull
 fi
 
-mkdir -p "${HOME}/.axiom/tmp/"
-"$AXIOM_PATH/interact/account-helpers/generate_amass.sh"
-
-echo -e "${Blue}Configuring your cloud account...${Color_Off}"
 $AXIOM_PATH/interact/axiom-account-setup
 
 if [ -f ~/.ssh/id_rsa.pub ] || [ -f ~/.ssh/id_ed25519.pub ]; then
-    echo -e "${Blue}Detected SSH public key, would you like me to install this for your axiom setup? y/n ${Color_Off}"
+    echo -e "${Red}Detected SSH public key, would you like me to install this for your axiom setup? y/n ${Color_Off}"
     read ans
     if [ $ans == "y" ]; then
         if [ -f ~/.ssh/id_rsa.pub ]; then
@@ -204,26 +197,26 @@ if [ -f ~/.ssh/id_rsa.pub ] || [ -f ~/.ssh/id_ed25519.pub ]; then
             cat ~/.ssh/id_ed25519.pub >$AXIOM_PATH/configs/authorized_keys
         fi
     else    
-        echo -e "${Blue}Would you like to generate a fresh pair? y/n ${Color_Off}"
+        echo -e "${Red}Would you like to generate a fresh pair? y/n ${Color_Off}"
         read ans
         if [ $ans == "y" ]; then
             ssh-keygen
             cat ~/.ssh/id_rsa.pub >$AXIOM_PATH/configs/authorized_keys
         
         else
-            echo -e "${Blue}Need to provide SSH public key. Exiting...  ${Color_Off}"
+            echo -e "${Red}Need to provide SSH public key. Exiting...  ${Color_Off}"
             exit 0
         fi
 
     fi
 else
-    echo -e "${Blue}No SSH public key detected, would you like to generate a fresh pair? y/n ${Color_Off}"
+    echo -e "${Red}No SSH public key detected, would you like to generate a fresh pair? y/n ${Color_Off}"
     read ans
     if [ $ans == "y" ]; then
         ssh-keygen
         cat ~/.ssh/id_rsa.pub >$AXIOM_PATH/configs/authorized_keys
     else
-            echo -e "${Blue}Need to provide SSH public key. Exiting...  ${Color_Off}"
+            echo -e "${Red}Need to provide SSH public key. Exiting...  ${Color_Off}"
             exit 0
     fi
 fi
