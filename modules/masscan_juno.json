@@ -1,0 +1,10 @@
+[
+        {
+                "command":"sudo masscan --top-ports=1000 --rate=1000 --banners -iL input -oG output",
+                "ext":"txt"
+        },
+        {
+                "command":"sudo masscan --top-ports=1000 --rate=1000 --banners -iL input -oX output",
+                "ext":"xml"
+        }
+]
