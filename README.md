@@ -1,1 +1,1 @@
-bash <(curl -s https://raw.githubusercontent.com/pry0cc/axiom/master/interact/axiom-configure)
+bash <(curl -s https://raw.githubusercontent.com/nullman0x/axiom/master/interact/axiom-configure)
