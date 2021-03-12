@@ -1,0 +1,4 @@
+[{
+        "command": "/home/op/go/bin/dalfox -b lasvegas.xss.ht --no-color --ignore-return 302,301,404  --only-discovery file input -o output",
+        "ext": "txt"
+}]
