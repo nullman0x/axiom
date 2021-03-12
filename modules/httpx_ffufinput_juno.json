@@ -1,0 +1,4 @@
+[{
+	"command":"cat input | /home/op/go/bin/httpx -title -content-length -silent -no-color -mc 200 -threads 100 -o output",
+	"ext":"txt"
+}]
