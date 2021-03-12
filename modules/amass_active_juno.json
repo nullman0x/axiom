@@ -1,0 +1,4 @@
+[{
+        "command":"/usr/bin/amass enum -active  -rf ~/jarvis/resolvers.txt -ip -p 80,443,8080 -config ~/jarvis/amass/config.ini -df input -o output ",
+        "ext":"txt"
+}]
