@@ -4,19 +4,7 @@ AXIOM_PATH="$HOME/.axiom"
 
 cat << EOF
 
- ▄▄▄      ▒██   ██▒ ██▓ ▒█████   ███▄ ▄███▓
-▒████▄    ▒▒ █ █ ▒░▓██▒▒██▒  ██▒▓██▒▀█▀ ██▒
-▒██  ▀█▄  ░░  █   ░▒██▒▒██░  ██▒▓██    ▓██░
-░██▄▄▄▄██  ░ █ █ ▒ ░██░▒██   ██░▒██    ▒██
- ▓█   ▓██▒▒██▒ ▒██▒░██░░ ████▓▒░▒██▒   ░██▒
- ▒▒   ▓▒█░▒▒ ░ ░▓ ░░▓  ░ ▒░▒░▒░ ░ ▒░   ░  ░
-  ▒   ▒▒ ░░░   ░▒ ░ ▒ ░  ░ ▒ ▒░ ░  ░      ░
-  ░   ▒    ░    ░   ▒ ░░ ░ ░ ▒  ░      ░
-      ░  ░ ░    ░   ░      ░ ░         ░
-
-The Dynamic Infrastructure Framework - @pry0cc
-
-Sponsored by SecurityTrails - https://securitytrails.com/app/signup
+NULLMAN!!!
 
 EOF
 
