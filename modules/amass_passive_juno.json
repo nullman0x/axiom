@@ -1,0 +1,4 @@
+[{
+        "command":"/usr/bin/amass enum -passive  -rf ~/jarvis/resolvers.txt -config ~/jarvis/amass/config.ini -df input -o output",
+        "ext":"txt"
+}]
