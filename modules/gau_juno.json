@@ -1,0 +1,4 @@
+[{
+	"command":"cat input | /home/op/go/bin/gau -b jpg,jpeg,gif,tif,tiff,png,ttf,woff,woff2,ico,pdf -random-agent | tee output",
+	"ext":"txt"
+}]
