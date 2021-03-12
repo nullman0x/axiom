@@ -1,0 +1,5 @@
+[{
+        "command":"/home/op/go/bin/subfinder -config /home/op/jarvis/subfinder/config.yaml -silent -d _target_ -o _output_/_target_",
+        "ext":"txt",
+        "threads":"3"
+}]
