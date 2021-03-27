@@ -1,0 +1,6 @@
+[{
+	"command":"/home/op/go/bin/ffuf -c -w _wordlist_ -u '_target_' -H 'Host: FUZZ' -of csv -o _output_/$RANDOM.txt -v -t 1000",
+    "wordlist":"~/jarvis/vhost_wordlist.txt",
+	"ext":"csv",
+	"threads":"1"
+}]
