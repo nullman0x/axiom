@@ -1,5 +1,5 @@
 [{
-	"command":"/home/op/go/bin/ffuf -c -w _wordlist_ -u '_target_' -H 'Host: FUZZ' -of csv -o _output_/_cleantarget_ -v -t 1000 -fs $(curl -s -H 'Host: nonexistent' _target_ |wc -c)",
+	"command":"/home/op/go/bin/ffuf -c -w _wordlist_ -u '_target_' -H 'Host: FUZZ' -of csv -o _output_/_cleantarget_ -v -mc 200 -t 1000 -fs $(curl -s -H 'Host: nonexistent' _target_ |wc -c)",
     "wordlist":"~/jarvis/vhost_wordlist.txt",
 	"ext":"csv",
 	"threads":"1"
