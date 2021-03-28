@@ -1,5 +1,5 @@
 [{
-	"command":"/home/op/go/bin/subtake -f input -timeout 30 -t 100 -c ~/jarvis/fingerprints.json -ssl -o output",
+	"command":"/home/op/go/bin/subtake -f input -timeout 30 -t 100 -c ~/jarvis/fingerprints.json -ssl -o output -v",
 	"ext":"txt",
 	"threads":"1"
 }]
