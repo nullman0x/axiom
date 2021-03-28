@@ -1,0 +1,5 @@
+[{
+	"command":"/home/op/go/bin/subjack -w _target_ -timeout 30 -t 100 -ssl -o _output_/_target_",
+	"ext":"txt",
+	"threads":"1"
+}]
