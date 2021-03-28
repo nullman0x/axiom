@@ -1,4 +1,4 @@
 [{
-        "command":"/home/op/go/bin/nuclei -silent -update-templates ; cat input | /home/op/go/bin/nuclei -random-agent -t exposures -t misconfiguration -t vulnerabilities -t cves -t exposed-panels -t default-logins -t dns -t takeovers -t exposed-tokens -t technologies -o output",
+        "command":"/home/op/go/bin/nuclei -silent -update-templates ; cat input | /home/op/go/bin/nuclei -random-agent -t exposures -t fuzzing -t iot -t miscellaneous -t misconfiguration -t vulnerabilities -t cves -t exposed-panels -t default-logins -t dns -t takeovers -t exposed-tokens -t technologies -o output",
         "ext":"txt"
 }]
