@@ -1,0 +1,4 @@
+[{
+    "command":"/usr/bin/findomain -f input -u output -c ~/jarvis/findomain_config.yml",
+    "ext":"txt"
+}]
